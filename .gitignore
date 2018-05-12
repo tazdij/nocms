@@ -1,0 +1,4 @@
+*.o
+*.ppu
+src/nocms
+src/nocms.exe

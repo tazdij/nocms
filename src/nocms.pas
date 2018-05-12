@@ -10,9 +10,14 @@ uses
 
 var
     sitePath : AnsiString;
+    lex : TNcLexer;
 
 begin
   
   sitePath := 'TestingPath';
+
+  (* Create the lexer instance and lex our site *)
+  lex := TNcLexer.Create();
+
   WriteLn('Hello Static Web!');
 end.

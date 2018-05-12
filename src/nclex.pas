@@ -62,7 +62,9 @@ var
         '-', '_', '(', ')', '*', '^', '%', '$', '#', '@',
         '!', '~', '`', ',', '.', '?', '\', '|', ':', ';'
         );
-        
+
+    ElementSpecialCL : Array[0..3] of AnsiString = ('-', '_', ':', '.');
+    
 
     WhitespaceCL : Array[0..3] of AnsiString = (#13, #10, #7, #32);
 
@@ -70,9 +72,10 @@ var
 constructor TNcLexer.Create();
 var
     StartState, WhitespaceState,
-    StartTag, TagSlash, TagIdent, 
-    TagAttr, TagString, TagNumber, 
-    TagEnd: TDFAState;
+    StartElementState, ElementSlashState,
+    StartElementIdentState, ElementIdentState,
+    StartAttributeState, AttributeIdentState,
+    ElementEndState: TDFAState;
 
 begin
     self.FCurLine := 1;

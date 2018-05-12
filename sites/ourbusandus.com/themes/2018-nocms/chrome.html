@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+    </head>
+    <body>
+        @def person_name : String
+        
+        @set person_name := "name"
+
+        @if person_name = "name"
+            <pre>person_name is "name"</pre>
+        @endif
+
+
+        <strong>My name is: </strong> @person_name@<br />
+
+
+        
+    </body>
+</html>
